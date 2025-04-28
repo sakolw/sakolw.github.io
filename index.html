@@ -1,7 +1,22 @@
 <!DOCTYPE html>
-<html>
-<body>
-<h1>Hello World!</h1>
-<p>I'm hosted with GitHub Pages.</p>
-</body>
-</html>
+  <html>
+     <head>
+         <title>Wedding Location</title>
+         <script>
+             window.onload = function() {
+                 var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+                 if (/android/i.test(userAgent)) {
+                     window.location.href = "https://maps.app.goo.gl/tuHWK1g5bGQRY2Md7?g_st=a";
+                 } else if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+                     window.location.href = "https://maps.apple.com/?address=Thanyaburi,%20Pathum%20Thani%2012110,%20Thailand&auid=13962248690896000278&ll=14.056833,100.829671&lsp=9902&q=Chaan%20de%20Cafe&t=m";
+                 } else {
+                     // Fallback for other devices
+                     window.location.href = "https://maps.app.goo.gl/tuHWK1g5bGQRY2Md7?g_st=a";
+                 }
+             }
+         </script>
+     </head>
+     <body>
+         <p>If you are not redirected, <a href="https://www.google.com/maps/place/YOUR_LOCATION">click here</a>.</p>
+     </body>
+     </html>
